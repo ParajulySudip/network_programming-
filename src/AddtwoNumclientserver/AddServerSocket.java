@@ -14,13 +14,15 @@ public class AddServerSocket {
 
             while (true) {
                 try (Socket connectionSocket = ss.accept()) {
-                    DataInputStream inFromClient = new DataInputStream(connectionSocket.getInputStream());
+                    DataInputStream inFromClient = new DataInputStream
+        (connectionSocket.getInputStream());
                     int num1 = inFromClient.readInt();
                     int num2 = inFromClient.readInt();
                     
                     int sum = num1 + num2;
                     
-                    PrintWriter outToClient = new PrintWriter(connectionSocket.getOutputStream(), true);
+                    PrintWriter outToClient = new PrintWriter
+        (connectionSocket.getOutputStream(), true);
                     outToClient.println(sum);
                 }
             }

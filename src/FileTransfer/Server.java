@@ -26,14 +26,11 @@ public class Server {
             dataInputStream=new DataInputStream(sc.getInputStream());
             recieveFile("");
             dataInputStream.close();
-            
-            
-            
+         
         } catch (Exception e) {
             System.out.println("Server:"+e.getMessage());
         }
-        
-
+   
     }
     public static void recieveFile(String path) throws FileNotFoundException, IOException {
         int bytes=0;
@@ -45,8 +42,6 @@ public class Server {
             size -= bytes;
         }
         }
-        
-        
-        
+     
     }
 }

@@ -16,7 +16,7 @@ public class SimpleHttpServer {
         // Create a new handler for the root path
         server.createContext("/", new HttpHandler() {
             public void handle(HttpExchange exchange) throws IOException {
-                String response = "<h1> Hi this is bca class</h1>";
+                String response = "<h1> ramro garis</h1>";
                 exchange.sendResponseHeaders(200, response.getBytes().length);
                 OutputStream os = exchange.getResponseBody();
                 os.write(response.getBytes());

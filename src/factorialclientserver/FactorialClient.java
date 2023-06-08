@@ -11,7 +11,7 @@ public class FactorialClient {
     public static void main(String[] args) {
         try {
             
-            try (Socket s = new Socket("192.168.0.112", 1234)) {
+            try (Socket s = new Socket("192.168.0.103", 1234)) {
                 BufferedReader inFromUser = new BufferedReader(new InputStreamReader(System.in));
                 DataInputStream dis = new DataInputStream(s.getInputStream());
                 DataOutputStream dos = new DataOutputStream(s.getOutputStream());

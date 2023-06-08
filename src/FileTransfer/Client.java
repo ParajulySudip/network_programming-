@@ -17,7 +17,7 @@ import java.net.Socket;
 public class Client {
     public static DataOutputStream dataOutputStream=null;
     public static void main(String[] args) {
-        try(Socket sc=new Socket("192.168.0.112",3355)) {
+        try(Socket sc=new Socket("192.168.0.101",3355)) {
             dataOutputStream=new DataOutputStream(sc.getOutputStream());
             //send file
             sendfile("D:\\New folder\\DSunit7.pdf");
